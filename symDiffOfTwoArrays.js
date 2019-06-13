@@ -26,7 +26,11 @@ function diffArray(arr1, arr2) {
     //   }
     // }
 
-    
+    const tempArr = [...arr1, ...arr2]
+
+    newArr = tempArr.filter(function(element) {
+      return arr1.indexOf(element) === -1 || arr2.indexOf(element) === -1
+    })
     return newArr
   }
   
