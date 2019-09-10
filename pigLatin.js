@@ -2,6 +2,7 @@ function translatePigLatin(str) {
 
   const vowel = /[aeiou]/gi
   let translated = ''
+  
 
   if (str[0].match(vowel)) {
   translated = str + 'way'
@@ -36,7 +37,7 @@ translatePigLatin("california")
 //   }
 
 //   for (let i = 0; i < splitStr.length; i++) {
-//     if ()
+//     if (!splitStr.match(vowel))
 //   }
 // }
 
