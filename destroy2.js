@@ -2,22 +2,22 @@ function destroyer(arr) {
   // Remove all the values
 
   var args = Array.prototype.slice.call(arguments);
-  console.log("outside destroyer array: ", args[1], args[2]);
-  console.log(args.splice([1, -1]));
+  console.log("comparers: ", args.slice(1, 10));
   console.log("arr: ", arr);
-  console.log("all arguments: ", args);
+  console.log("args: ", args);
 
-  // var newArr = [];
-  // for (var i = 0; i < args.length; i++) {
-  //   for (var j = 0; j < arr.length; j++) {
-  //     if (arr[j].indexOf(args[i], 1) === -1) {
-  //       newArr.push(arr[j])
-  //   }
-  // }
-  // console.log(newArr)
-  // }
+  var toBeCompared = args.slice(1, 10);
 
-  return arr;
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    // console.log(arr.length);
+    console.log(arr[i]);
+    if (toBeCompared.indexOf(arr[i]) === -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  console.log(newArr);
+  return newArr;
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
