@@ -12,6 +12,7 @@ function sumPrimes(num) {
       }
     }
   }
+
   function getSum(total, num) {
     return total + num;
   }
