@@ -1,4 +1,5 @@
 function sumFibs(num) {
+  let total = 1;
   let result = 0;
   let initResult = 0;
   let currentResult = 1;
@@ -8,11 +9,17 @@ function sumFibs(num) {
     initResult = currentResult;
     currentResult = result;
 
+    if (result > num) {
+      break;
+    }
+
     if (result <= num && result % 2 !== 0) {
-      console.log(result);
+      console.log((total += result));
+      // total += result;
     }
   }
-  console.log((result += result));
+  return total;
+
   // return (result += currentResult);
   //   F(n) = F(n-1) + F(n-2)
 }
