@@ -3,8 +3,7 @@ function myReplace(str, before, after) {
   var Before = before;
   var After = after;
   console.log(strArray);
-  console.log(Before.split(""));
-  console.log(Before.split("").join(""));
+  console.log(Before);
   console.log(After);
 
   if (strArray.includes(Before)) {
