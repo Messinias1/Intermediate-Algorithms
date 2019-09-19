@@ -1,7 +1,7 @@
 function destroyer(arr) {
   // Remove all the values
-
-  var args = Array.prototype.slice.call(arguments);
+  var args = [...arguments];
+  // var args = Array.prototype.slice.call(arguments);
   console.log("comparers: ", args.slice(1, 10));
   console.log("arr: ", arr);
   console.log("args: ", args);
