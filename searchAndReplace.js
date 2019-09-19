@@ -6,8 +6,15 @@ function myReplace(str, before, after) {
   console.log(Before);
   console.log(After);
 
+  var newAfter = After.split("");
+
+  if (Before[0] === Before[0].toUpperCase()) {
+    newAfter[0] = newAfter[0].toUpperCase();
+    console.log(newAfter.join(""));
+  }
+
   if (strArray.includes(Before)) {
-    console.log(str.replace(Before, After));
+    console.log(str.replace(Before, newAfter.join("")));
   }
 }
 
