@@ -10,13 +10,22 @@ function getIndexToIns(arr, num) {
       return 0;
     }
   }
-
-  arr.push(num);
-  console.log(arr);
-  arr.sort(compare);
-  console.log(arr);
-  console.log(arr.indexOf(num));
-  return arr.indexOf(num);
+  console.log(
+    arr
+      .concat(num)
+      .sort(compare)
+      .indexOf(num)
+  );
+  return arr
+    .concat(num)
+    .sort(compare)
+    .indexOf(num);
+  //   arr.push(num);
+  //   console.log(arr);
+  //   arr.sort(compare);
+  //   console.log(arr);
+  //   console.log(arr.indexOf(num));
+  //   return arr.indexOf(num);
 }
 
 getIndexToIns([40, 60, 6], 50);
