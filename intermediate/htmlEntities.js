@@ -17,8 +17,31 @@ function convertHTML(str) {
   }
   console.log(str);
   return str;
+
+  // var strArr = str.split(" ");
+  // console.log(strArr);
+  // for (var i = 0; i < strArr.length; i++) {
+  //   switch (strArr[i]) {
+  //     case "&":
+  //       strArr[i] = "&amp";
+  //       break;
+  //     case "<":
+  //       strArr[i] = "&lt";
+  //       break;
+  //     case ">":
+  //       strArr[i] = "&gt;";
+  //       break;
+  //     case "''":
+  //       strArr[i] = "&quot";
+  //       break;
+  //     case "'":
+  //       strArr[i] = "&apos";
+  //   }
+  // }
+  // console.log(strArr.join(" "));
+  // return strArr.join(" ");
 }
-convertHTML("Dolce &  Gabbana");
+convertHTML("Dolce & Gabbana");
 
 // entities: & = &amp;  < = &lt;  > = &gt; '' = &quot; ' = &apos
 
