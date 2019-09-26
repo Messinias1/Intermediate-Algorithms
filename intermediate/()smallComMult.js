@@ -20,8 +20,8 @@ function smallestCommons(arr) {
   }
   console.log(primes);
   for (var i = 0; i < primes.length; i++) {
-    for(var j = 0; j < rangeArr.length; j++){
-        if ()
+    for (var j = 0; j < rangeArr.length; j++) {
+      // if ()
     }
   }
 }
