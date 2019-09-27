@@ -4,29 +4,31 @@ function whatIsInAName(collection, source) {
   // Only change code below this line
   var keys = Object.keys(source);
   console.log(keys);
-  console.log(source[keys[0]]);
 
-  for (var i = 0; i < keys.length; i++) {
-    console.log(source[keys[i]]);
-  }
-
-  for (var i = 0; i < collection.length; i++) {
-    var colKeys = Object.keys(collection[i]);
-    console.log(colKeys);
-    for (var j = 0; j < colKeys.length; j++) {}
-  }
+  var keyArray = collection.map(key => {
+    for (var i in key) {
+      // console.log("key: ", key);
+      var value = key[i];
+      console.log("value: ", value);
+      for (i in keys) {
+        console.log("i: ", source[keys[i]]);
+      }
+      arr.push(value);
+    }
+  });
+  console.log(arr);
   // Only change code above this line
   return arr;
 }
 
 whatIsInAName(
   [
-    { apple: 1, bat: 2 },
-    { apple: 1 },
-    { apple: 1, bat: 2, cookie: 2 },
-    { bat: 2 }
+    { apple: "red", bat: "black" },
+    { apple: "red" },
+    { apple: "red", bat: "black", cookie: "sugar" },
+    { bat: "black" }
   ],
-  { apple: 1, bat: 2 }
+  { apple: "red", bat: "black" }
 );
 
 // Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
