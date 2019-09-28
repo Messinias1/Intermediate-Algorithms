@@ -6,10 +6,10 @@ var people = [
   { name: "Bill", age: 40 }
 ];
 
-var compare = { name: "Carl", age: 24, height: 170 };
+var compare = { name: "Carl" };
 
 var keys = Object.keys(compare);
-console.log(keys);
+console.log("compare keys :", compare[keys]);
 
 var arr = [];
 
@@ -26,16 +26,26 @@ var arr = [];
 
 for (var i = 0; i < people.length; i++) {
   var objects = people[i];
-  console.log(objects);
+  console.log("Objects var: ", objects);
   for (var key in objects) {
-    console.log(key);
-    console.log(objects[key]);
-    if (keys.hasOwnProperty(objects[key])) {
+    console.log("key :", key);
+    console.log("key's value :", objects[key]);
+    if (objects.hasOwnProperty(keys)) {
       arr.push(objects);
       console.log(arr);
     }
   }
 }
+
+// for (var i = 0; i < people.length; i++) {
+//   var objects = people[i];
+//   console.log("objects: ", objects);
+
+//   if (objects.hasOwnProperty(compare[keys])) {
+//     arr.push(objects[keys]);
+//   }
+// }
+// console.log(arr);
 
 // for (var key in people) {
 //   if (Object.prototype.hasOwnProperty.call(people, key)) {
