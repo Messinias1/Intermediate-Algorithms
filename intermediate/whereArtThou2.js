@@ -2,17 +2,15 @@ function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
   // Only change code below this line
-  var keys = Object.entries(source);
-  console.log(keys.flat());
+  var keys = Object.entries(source).flat();
+  console.log(keys);
 
-  var fillKeys = collection.map(val => {
-    console.log(Object.entries(val));
-    console.log(Object.entries(val).includes(keys));
-
-    var each = keys.flat().every(value => {
-      return Object.entries(val)
-        .flat()
-        .includes(value);
+  collection.map(val => {
+    var collEnts = Object.entries(val).flat();
+    console.log(collEnts);
+    // console.log(Object.entries(val).includes(keys));
+    var each = keys.every(value => {
+      return collEnts.includes(value);
     });
     console.log(each);
     if (each) {
