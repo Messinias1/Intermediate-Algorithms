@@ -9,6 +9,7 @@ function whatIsInAName(collection, source) {
     var collEnts = Object.entries(val).flat();
     console.log(collEnts);
     // console.log(Object.entries(val).includes(keys));
+    // The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
     var each = keys.every(value => {
       return collEnts.includes(value);
     });
@@ -18,7 +19,6 @@ function whatIsInAName(collection, source) {
     }
   });
   console.log(arr);
-
   // Only change code above this line
   return arr;
 }

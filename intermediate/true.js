@@ -27,45 +27,9 @@ function truthCheck(collection, pre) {
       }
     }
   }
-  // //   console.log("colArr", colArr.flat());
-  // var argsArr = colArr.flat().concat(preArr);
-  // // console.log(argsArr);
-
-  // for (var i = 0; i < argsArr.length; i++) {
-  //   // console.log(argsArr[i]);
-  //   if (
-  //     argsArr[i] === false ||
-  //     argsArr[i] === null ||
-  //     argsArr[i] === undefined ||
-  //     argsArr.includes(NaN)
-  //   ) {
-  //     result = false;
-  //     break;
-  //   }
-  // }
   console.log("final result", result);
   return result;
 }
-
-// false , 0 , "" , null , undefined , and NaN
-// truthCheck(
-//   [
-//     { user: "Tinky-Winky", sex: "male" },
-//     { user: "Dipsy", sex: "male" },
-//     { user: "Laa-Laa", sex: "female" },
-//     { user: "Po", sex: "female" }
-//   ],
-//   "sex"
-// );
-// truthCheck(
-//   [
-//     { user: "Tinky-Winky", sex: "male" },
-//     { user: "Dipsy" },
-//     { user: "Laa-Laa", sex: "female" },
-//     { user: "Po", sex: "female" }
-//   ],
-//   "sex"
-// );
 truthCheck(
   [
     { user: "Tinky-Winky", sex: "male", age: 0 },
