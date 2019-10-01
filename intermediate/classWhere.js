@@ -1,5 +1,4 @@
 function whatIsInAName(collection, source) {
-  // What's in a name?
   var arr = [];
   // Only change code below this line
   var keys = Object.keys(source);
@@ -9,7 +8,6 @@ function whatIsInAName(collection, source) {
     }
     return true;
   });
-  // names = searchWords.filter(x => students.indexOf(x) !== -1);
   console.log(arr);
   // Only change code above this line
   return arr;

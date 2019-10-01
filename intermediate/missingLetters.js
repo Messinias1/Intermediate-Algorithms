@@ -1,24 +1,28 @@
 function fearNotLetter(str) {
   let alphabet = "abcdefghijklmnopqrstuvwxyz";
   let alphabetArr = alphabet.split("");
-  console.log(alphabetArr);
+  var start = str.charCodeAt(str[0]) - 97;
 
   let test = str.split("");
   console.log(test);
 
-  for (var i = 0; i < str.length; i++) {
-    // console.log(str[i]);
-    var strCode = str.charCodeAt([i]) - 97;
-    // console.log("STR CODE", strCode);
-    var alphabetCode = alphabet.charCodeAt([i]) - 97;
-    // console.log(alphabet[i]);
-    // console.log("ALPHABET CODE", alphabetCode);
+  var alphabetCharArr = [];
+  for (var i = start; i < alphabetArr.length; i++) {
+    var alphabetCode = alphabetArr[i];
+    alphabetCharArr.push(alphabetCode);
+  }
 
-    if (strCode !== alphabetCode) {
-      console.log(alphabet[i]);
-      return alphabet[i];
+  alphabetCharArr.length = test.length;
+  console.log(alphabetCharArr);
+
+  for (var i = 0; i < test.length; i++) {
+    console.log(test[i]);
+    console.log(alphabetCharArr[i]);
+    if (test[i] !== alphabetCharArr[i]) {
+      console.log("MISSING LETTER", alphabetCharArr[i]);
+      return alphabetCharArr[i];
     }
   }
 }
 
-fearNotLetter("stvwx");
+fearNotLetter("acdefg");
