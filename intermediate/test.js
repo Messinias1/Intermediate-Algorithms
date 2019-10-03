@@ -1,21 +1,34 @@
-function whatIsInAName(collection, source) {
-  var arr = [];
-  var keys = Object.entries(source).flat();
+function addTogether() {
+  var args = [...arguments];
 
-  collection.map(val => {
-    var collEnts = Object.entries(val).flat();
-    var each = keys.every(value => {
-      return collEnts.includes(value);
-    });
-    if (each) {
-      arr.push(val);
+  if (args.length === 2) {
+    function isNum() {
+      if (typeof args[0] === "number" && typeof args[1] === "number") {
+        console.log(args[0] + args[1]);
+        return args[0] + args[1];
+      }
     }
-  });
-  console.log(arr);
-  return arr;
+    return isNum(args);
+  }
+
+  if (args.length === 1 && typeof args[0] === "number") {
+    function sumTwoAnd(num) {
+      if (typeof num === "number") {
+        console.log(args[0] + num);
+        return args[0] + num;
+      }
+      console.log(result + addTwo);
+      return result + addTwo;
+    }
+    return sumTwoAnd(3);
+  } else return undefined;
 }
 
-whatIsInAName(
-  [{ apple: 1, bat: 2 }, { apple: 1 }, { apple: 1, bat: 2, cookie: 2 }],
-  { apple: 1, cookie: 2 }
-);
+addTogether(2, 6);
+
+// Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+// For example, addTogether(2, 3)should return 5, and addTogether(2)should return a function.
+// Calling this returned function with a single argument will then return the sum:
+// var sumTwoAnd = addTogether(2);
+// sumTwoAnd(3)returns 5.
+// If either argument isn't a valid number, return undefined.
