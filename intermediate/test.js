@@ -1,3 +1,22 @@
+// var f = function(y) {
+//   console.log("f:", y);
+// };
+
+// var getF = function(x) {
+//   console.log("getF:", x);
+//   return f;
+// };
+
+// getF(1)(2);
+
+// function addTogether(x) {
+//   return function(y) {
+//     console.log(x + y);
+//     return x + y;
+//   };
+// }
+// addTogether(2)(5);
+
 function addTogether() {
   var args = [...arguments];
 
@@ -12,15 +31,12 @@ function addTogether() {
   }
 
   if (args.length === 1 && typeof args[0] === "number") {
-    function sumTwoAnd(num) {
+    return function sumTwoAnd(num) {
       if (typeof num === "number") {
         console.log(args[0] + num);
         return args[0] + num;
       }
-      console.log(result + addTwo);
-      return result + addTwo;
-    }
-    return sumTwoAnd(3);
+    };
   } else return undefined;
 }
 

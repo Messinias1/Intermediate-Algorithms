@@ -12,17 +12,16 @@ function addTogether() {
   }
 
   if (args.length === 1 && typeof args[0] === "number") {
-    function sumTwoAnd(num) {
+    return function sumTwoAnd(num) {
       if (typeof num === "number") {
         console.log(args[0] + num);
         return args[0] + num;
       }
-    }
-    return sumTwoAnd(3);
+    };
   } else return undefined;
 }
 
-addTogether(2);
+addTogether(2, 6);
 
 // Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
 // For example, addTogether(2, 3)should return 5, and addTogether(2)should return a function.
