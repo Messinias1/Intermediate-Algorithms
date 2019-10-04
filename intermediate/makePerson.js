@@ -1,29 +1,35 @@
-var Person = function(first, last) {
+var Person = function(firstName, lastName, firstAndLast) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.firstAndLast = firstAndLast;
+
   this.setFirstName = function(first) {
-    return first + " " + this.getLastName();
+    return (this.firstName = first);
   };
 
   this.setLastName = function(last) {
-    return last;
+    return (this.lastName = last);
   };
 
   this.setFullName = function(firstAndLast) {
-    return firstAndLast;
+    return (this.getFullName = firstAndLast);
   };
 
   this.getFirstName = function() {
-    return "Bob";
+    return firstName;
   };
 
   this.getLastName = function() {
-    return "Ross";
+    return lastName;
   };
 
   this.getFullName = function() {
-    return first + " " + last;
+    return firstName + " " + lastName;
   };
 };
 
-var bob = new Person("Bob", "Ross");
+var bob = new Person("Bob", "Ross", "Bob Ross");
+console.log(bob);
+console.log(bob.firstAndLast.split(" ")[0]);
 console.log(bob.setFirstName("Haskell"));
-console.log(bob.getFullName());
+console.log(bob.getFirstName());
