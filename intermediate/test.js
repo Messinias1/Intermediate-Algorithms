@@ -6,17 +6,27 @@ function Person(name, lastName) {
     return (this.name = newName);
   };
 
+  this.updateLastName = function(newLastName) {
+    return (this.lastName = newLastName);
+  };
+
+  this.updateFullName = function(firstAndLast) {
+    return (this.getFullName = firstAndLast);
+  };
+
   this.getName = function() {
     return this.name;
   };
 
+  this.getLastName = function() {
+    return this.lastName;
+  };
+
   this.getFullName = function() {
-    return this.name + " " + this.lastName;
+    return this.name + this.lastName;
   };
 }
 
 let Carl = new Person("Carl", "Kakisis");
-console.log(Carl);
-console.log(Carl.updateName("Sven"));
-// console.log(Carl.getName());
+console.log(Carl.updateFullName("Sven Ostman"));
 console.log(Carl.getFullName());
