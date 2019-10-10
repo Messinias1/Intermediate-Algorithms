@@ -48,7 +48,6 @@ function sym(args) {
       argsArr.push(tester);
     }
     console.log(argsArr);
-    // array1 = array1.filter(val => !array2.includes(val));
     var filteredArr = [];
     for (var i = 0; i < argsArr.length; i++) {
       if (i < argsArr.length - 1) {
@@ -59,11 +58,6 @@ function sym(args) {
           );
         });
         filteredArr.push(filtered);
-        // console.log(
-        //   filtered.filter(item => {
-        //     return filtered.lastIndexOf(item) == filtered.indexOf(item);
-        //   })
-        // );
         i++;
       }
     }
@@ -81,14 +75,6 @@ function sym(args) {
         return final;
       }
     }
-    // argsArr.reduce((acc, compare) => {
-    //   console.log(acc);
-    //   var merger = acc.concat(compare);
-    //   var newStart = merger.filter(item => {
-    //     return merger.lastIndexOf(item) == merger.indexOf(item);
-    //   });
-    //   console.log(newStart);
-    // });
   }
 
   if ([...arguments].length == 6) {
@@ -98,7 +84,6 @@ function sym(args) {
       argsArr.push(tester);
     }
     console.log(argsArr);
-    // array1 = array1.filter(val => !array2.includes(val));
     var filteredArr = [];
     for (var i = 0; i < argsArr.length; i++) {
       if (i < argsArr.length - 1) {
