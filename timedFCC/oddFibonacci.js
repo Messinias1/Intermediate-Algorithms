@@ -1,12 +1,27 @@
 function sumFibs(num) {
-  var startNum = 1;
-  var prevNum = startNum;
-  var currNum = startNum + prevNum;
-  var nextNum = currNum + prevNum;
-  console.log(nextNum);
+  let startNum = 0;
+  let currNum = 1;
+  let result = 0;
+  let total = 1;
+
+  for (let i = 1; i <= num; i++) {
+    result = currNum + startNum;
+    startNum = currNum;
+    currNum = result;
+
+    if (result > num) {
+      break;
+    }
+    if (result <= num && result % 2 !== 0) {
+      console.log((total += result));
+      console.log(total);
+    }
+  }
+  console.log("RES", total);
+  return total;
 }
 
-sumFibs(4);
+sumFibs(4000000);
 // sumFibs(4) should return 5.
 // sumFibs(4000000) should return 4613732.
 
