@@ -10,9 +10,12 @@ function rot13(str) {
       decoded.push(
         String.fromCharCode(((caps[i].charCodeAt(caps[i]) - 65 + 13) % 26) + 65)
       );
+    } else if (caps[i].charCodeAt(caps[i] === 32)) {
+      decoded.push(caps[i]);
     }
   }
   console.log(decoded.join(""));
+  return decoded.join("");
 }
 
 // Change the inputs below to test
