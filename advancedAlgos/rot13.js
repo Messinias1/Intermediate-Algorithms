@@ -1,7 +1,5 @@
 function rot13(str) {
   var caps = str.toUpperCase().split("");
-  console.log(caps);
-  //   console.log(caps.join(""));
   var capsRegex = /[A-Z]/g;
   var decoded = [];
 
@@ -14,6 +12,7 @@ function rot13(str) {
       decoded.push(caps[i]);
     }
   }
+
   console.log(decoded.join(""));
   return decoded.join("");
 }
