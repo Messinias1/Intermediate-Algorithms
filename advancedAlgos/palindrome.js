@@ -10,7 +10,6 @@ function palindrome(str) {
   console.log(reversed);
 
   if (reversed === lowerStr) {
-    console.log("true");
     return true;
   } else return false;
 }
