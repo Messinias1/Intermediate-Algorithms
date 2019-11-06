@@ -29,8 +29,11 @@ function checkCashRegister(price, cash, cid) {
     return { status: "INSUFFICIENT_FUNDS", change: [] };
   } else if (cidTotal == change) {
     console.log("even");
-    console.log({ status: "CLOSED", change: cid[i] });
-    return { status: "CLOSED", change: cid[i] == change };
+    for (let i = 0; i < cid.length; i++) {
+      console.log(cid[i][1] == change);
+      console.log({ status: "CLOSED", change: cid[i] });
+      return { status: "CLOSED", change: cid[i] };
+    }
   }
 }
 checkCashRegister(19.5, 20, [
