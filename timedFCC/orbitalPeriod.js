@@ -2,13 +2,22 @@ function orbitalPeriod(arr) {
   var GM = 398600.4418;
   var earthRadius = 6367.4447;
 
-  for (var i = 0; i < arr.length; i++) {
+  // for (var i = 0; i < arr.length; i++) {
+  //   var timeInSeconds =
+  //     2 * Math.PI * Math.sqrt(Math.pow(earthRadius + arr[i].avgAlt, 3) / GM);
+  //   arr[i].avgAlt = arr[i].orbitalPeriod;
+  //   delete arr[i].avgAlt;
+  //   arr[i].orbitalPeriod = Math.round(timeInSeconds);
+  // }
+  // console.log(arr);
+  // return arr;
+  arr.map(ob => {
     var timeInSeconds =
-      2 * Math.PI * Math.sqrt(Math.pow(earthRadius + arr[i].avgAlt, 3) / GM);
-    arr[i].avgAlt = arr[i].orbitalPeriod;
-    delete arr[i].avgAlt;
-    arr[i].orbitalPeriod = Math.round(timeInSeconds);
-  }
+      2 * Math.PI * Math.sqrt(Math.pow(earthRadius + ob.avgAlt, 3) / GM);
+    ob.avgAlt = ob.orbitalPeriod;
+    delete ob.avgAlt;
+    return (ob.orbitalPeriod = Math.round(timeInSeconds));
+  });
   console.log(arr);
   return arr;
 }
