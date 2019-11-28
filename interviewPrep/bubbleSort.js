@@ -2,8 +2,11 @@ function bubbleSort(array) {
   // change code below this line
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
+      console.log("j", array[j]);
+      console.log("j + 1", array[j + 1]);
       if (array[j] > array[j + 1]) {
         let tmp = array[j];
+        console.log("temp", tmp);
         array[j] = array[j + 1];
         array[j + 1] = tmp;
       }
