@@ -1,8 +1,6 @@
 function destroyer(arr) {
-  console.log(arr);
   var newArr = [];
   for (var i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
     if (arr[i] !== [...arguments][1] && arr[i] !== [...arguments][2]) {
       newArr.push(arr[i]);
     }
